@@ -1,6 +1,6 @@
 # ERFLOW
 
-1. Construct network -- choose from C0-C5 or honeycomb
+1. Construct network -- choose from C0-C4 or honeycomb
 
 C0: constructCOS7ER.m
 C1-C4: constructC.m
