@@ -15,7 +15,6 @@ h = 0.001*0.05;
 pinchescell = cell(1,length(Ninit+1:max(edges(:,2))));
 Nsteps = round(Tend/h);
 INPUTS = cell(1,Nsteps);
-QVEC = zeros(E,Nsteps);
 
 
 SINKS = cell(1,Nsteps); 

@@ -37,7 +37,6 @@ Esources = length(edges);
 
 
 %construct pinch point
-% pinchvec = randsample(length(edges)-length(midpinchedges),pinchcount);
 edgelengths = edges(1:length(edges)-length(midpinchedges),3);
 pinchvec = find(edgelengths>pinchthreshold);
 pinchvec = [pinchvec;(length(edges)-length(midpinchedges)+1:length(edges))'];

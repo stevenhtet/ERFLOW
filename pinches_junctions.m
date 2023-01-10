@@ -3,7 +3,7 @@
 %pinch durations are Tfactor times Holcman 2018
 %waiting times between pinches are Twaitfactor times Holcman 2018
 %Vfactor is proportion of junction volume expelled in each contraction
-s
+
 Vfactor = 1/6;
 Tfactor = 0.4;
 Twaitfactor = 0.4;
@@ -19,7 +19,6 @@ energetics = 0;
 pinchescell = cell(1,length(1:max(edges(:,2))));
 Nsteps = round(Tend/h);
 INPUTS = cell(1,Nsteps);
-QVEC = zeros(E,Nsteps);
 
 
 SINKS = cell(1,Nsteps); 

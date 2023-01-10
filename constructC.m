@@ -1,6 +1,6 @@
 %%Construct C1-4 networks.
 
-% C1DATA;
+C1DATA;
 %%specify that we want to construct C1 network; use C2DATA, C3DATA, C4DATA
 %%instead for C2-C4
 
@@ -104,12 +104,6 @@ end
 
 R = 0.03;
 b0 = 0.01*R;
-
-% % % % % exitnodes = setdiff(sinknodes,sheetnodes);
-% % % % %         plot(nodes(exitnodes,1),nodes(exitnodes,2),'sr','MarkerFaceColor','r')
-% % % % %         hold on
-% % % % %         plot(nodes(sheetnodes,1),nodes(sheetnodes,2),'*b')
-% % % % % % legend('exit nodes','sheet nodes')
 
 
 for i = 1:length(edgesinit)

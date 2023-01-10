@@ -64,7 +64,7 @@ end
     DISPS = zeros(round(length(UVEC)/nrecord),numparticles);
     INSTVELS = zeros(round(length(UVEC)/nrecord),numparticles);
     
-    %if pure diffusion remove INPUTS
+    %if pure diffusion remove INPUTS (i.e. pinches) and set U = 0
     if NOFLOW == 1
         for inputindex = 1:length(INPUTS)
             INPUTS{inputindex} = [];
@@ -99,4 +99,3 @@ end
 
     meaninstvels = mean(INSTVELS(:));
 
-    

@@ -5,7 +5,7 @@
 %Vfactor is proportion of peripheral sheet volume expelled in each contraction
 
 %run idsheetsdata.m to load volume parameters of peripheral sheets
-
+idsheetsdata
 Vfactor = 1/2;
 Tfactor = 0.2;
 Twaitfactor = 0.2 ;
@@ -27,7 +27,6 @@ QVEC = zeros(E,Nsteps);
 SINKS = cell(1,Nsteps); 
  R = 0.03;
     b0 = 0.01*R;
-% MU = 0.3695846/Tfactor;
 MU = 0.3695846/Twaitfactor;
 
 M = sinkcount;
@@ -56,7 +55,6 @@ for v = Ninit+1:max(edges(:,2))
             end
         end
         T = Tvec(i);
-%         halfpause = 0.1*T;
         Nstart = ceil(starttime/h);
         Nend = Nstart + ceil(2*T/h);
 
@@ -64,13 +62,10 @@ for v = Ninit+1:max(edges(:,2))
         for j = Nstart:min(Nend,Nsteps)
             b = (R+b0)/2 + (R-b0)/2*cos(2*pi*(j-Nstart)/(Nend-Nstart));
             bdot = -(R-b0)*pi/2/T*sin(2*pi*(j-Nstart)/(Nend-Nstart));
-%             if b<b0
-%                 b = b0;
-%             end
+
            Qj = -2*pi*L*bdot*(R - 2*(R-b)/3);
 
             INPUTS{j} = [INPUTS{j}; v, L, T, b, bdot, Qj];  
-%             SINKS{j} = [SINKS{j}, sinksmult];
         end
         
         if Nend+1<Nsteps
@@ -179,6 +174,3 @@ pinchinstance_junctions;%solve system instantaneously
 QVEC(:,iii) = qvec;%these are the computed fluxes
 QMAX(iii) = qmax;
 end
-% manyparticles_COS7
-
-% save('COS7maxL_Tfactor1_pressureflow.mat')

@@ -3,7 +3,7 @@
 %sheetT is duration of the contraction (contraction+relaxation lasts
 %2*sheetT)
 %sheetV is the fluid volume expelled in the contraction
-%
+
 
 
 
@@ -18,7 +18,6 @@ h = 0.001*0.1;
 
 
 energetics = 0;
-% Vjunction = 100;
 
 
 pinchescell = cell(1,length(1:max(edges(:,2))));
@@ -168,4 +167,3 @@ QVEC(:,iii) = qvec;%these are the computed fluxes
 QMAX(iii) = qmax;
 end
 
-% save('COS7maxL_Tfactor1_pressureflow.mat')

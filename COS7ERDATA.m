@@ -26,11 +26,9 @@ hold off
 figure
 for i = 1:length(edgesinit)
     plot([nodes(edgesinit(i,1),1) nodes(edgesinit(i,2),1)],[nodes(edgesinit(i,1),2) nodes(edgesinit(i,2),2)],'.-b')
-%     plot3([nodes(edges(i,1),1) nodes(edges(i,2),1)],[nodes(edges(i,1),2) nodes(edges(i,2),2)],[nodes(edges(i,1),3) nodes(edges(i,2),3)],'db')
     hold on
 end
 
-% adjmat = genadjmat(edges,N);
 adjmatinit = genadjmat(edgesinit,Ninit);
 degreevec = zeros(1,Ninit);
 for i = 1:Ninit
