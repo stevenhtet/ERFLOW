@@ -100,16 +100,3 @@ end
     meaninstvels = mean(INSTVELS(:));
 
     
-% % %     MSD = mean(DISPS,2);
-% % %     TS = ES;
-% % %     for i = 1:length(EV)
-% % %       TS(i) = edges(ES(i),3)/VS(i);
-% % %     end
-% % 
-% % % save('C1_ori.mat')
-% % % meaninstvelsNOFLOW = mean(INSTVELSNOFLOW(:));
-% % % 
-% % % save(['ID2_0.5V_0.2T.mat'],'D','Tend','h','NUMV','NUMVnorep',...
-% % %     'DISPS','INSTVELS','meannumvisited',...
-% % %     'meannumvisitednorep','VS','edgevels',...
-% % %     'MSD','EV','numparticles','Twaitfactor','Tfactor','Vfactor');
